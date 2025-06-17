@@ -1,0 +1,26 @@
+---
+import Button from './Button.astro'; 
+const {name,description,price,img} = Astro.props
+---
+
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-category="electronics" data-price="299">
+        <div class="relative overflow-hidden">
+          <img
+            src={img}
+            alt={name}
+            
+            class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+          />
+          <div class="absolute top-3 right-3 bg-primary-600 text-white px-2 py-1 rounded-full text-sm font-semibold">
+            New
+          </div>
+        </div>
+        <div class="p-4">
+          <h3 class="product-name font-semibold text-lg mb-2 hover:text-primary-600 transition-colors duration-200">{name}</h3>
+          <p class="product-description text-gray-600 text-sm mb-3">{description}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-primary-600">${price}</span>
+			<Button />
+		</div>
+	</div>
+</div>

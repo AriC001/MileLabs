@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Modern Table Lamp",
+        "description": "A sleek, minimalist table lamp perfect for any modern interior.",
+        "price": 49.99,
+        "img": "../src/assets/blog-placeholder-1.jpg"
+    },
+    {
+        "name": "Vintage Desk Lamp",
+        "description": "Classic vintage-style desk lamp with adjustable arm.",
+        "price": 59.99,
+        "img": "./src/assets/blog-placeholder-2.jpg"
+    },
+    {
+        "name": "Industrial Floor Lamp",
+        "description": "Tall industrial floor lamp with exposed bulb design.",
+        "price": 89.99,
+        "img": "./src/assets/blog-placeholder-3.jpg"
+    },
+    {
+        "name": "LED Bedside Lamp",
+        "description": "Energy-efficient LED lamp with touch controls for your bedside.",
+        "price": 34.99,
+        "img": "./src/assets/blog-placeholder-4.jpg"
+    },
+    {
+        "name": "Art Deco Wall Lamp",
+        "description": "Elegant wall lamp inspired by Art Deco design, ideal for hallways.",
+        "price": 44.99,
+        "img": "./src/assets/blog-placeholder-5.jpg"
+    },
+    {
+        "name": "Smart RGB Lamp",
+        "description": "WiFi-enabled lamp with customizable RGB colors and app control.",
+        "price": 69.99,
+        "img": "./src/assets/blog-placeholder-1.jpg"
+    },
+    {
+        "name": "Rustic Lantern Lamp",
+        "description": "Rustic lantern-style lamp for cozy, farmhouse-inspired spaces.",
+        "price": 39.99,
+        "img": "./src/assets/blog-placeholder-2.jpg"
+    },
+    {
+        "name": "Crystal Chandelier Lamp",
+        "description": "Luxurious chandelier lamp with sparkling crystal accents.",
+        "price": 129.99,
+        "img": "./src/assets/blog-placeholder-3.jpg"
+    }
+
+]
