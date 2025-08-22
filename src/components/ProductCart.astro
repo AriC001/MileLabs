@@ -1,26 +1,99 @@
 ---
-import Button from './Button.astro'; 
-const {name,description,price,img} = Astro.props
+import Button from './Button.astro'
+const {name,description,price,img = [],slug} = Astro.props
+const src = Array.isArray(img) ? (img[0] || '') : img;
 ---
+<style>
+            /* .product-card {min-height:28rem} */
+            @media (min-width:768px) {
+                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } */
+                .product-card {min-height:23rem}
+            }
+
+            /* md and up: use auto-fit with a sensible minimum card width to avoid tiny cards */
+            @media (min-width:1100px) {
+                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr)); } */
+                .product-card {min-height:25rem}
+            }
+
+            /* xl: allow slightly larger minimums */
+            @media (min-width:1280px) {
+                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); } */
+                .product-card {min-height:28rem}
+            }
+            
+
+</style>
 
 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-category="" data-price="">
-        <div class="relative overflow-hidden">
-          <img
-            src={img}
-            alt={name}
-            
-            class="w-max h-auto object-cover transition-transform duration-300 hover:scale-105"
-          />
-          <div class="absolute top-3 right-3 bg-primary-600 text-white px-2 py-1 rounded-full text-sm font-semibold">
-            New
-          </div>
-        </div>
-        <div class="p-4">
-          <h3 class="product-name font-semibold text-lg mb-2 hover:text-primary-600 transition-colors duration-200">{name}</h3>
-          <p class="product-description text-gray-600 text-sm mb-3">{description}</p>
-          <div class="flex items-center justify-between">
-            <span class="text-2xl font-bold text-primary-600">${price}</span>
-			<Button />
-		</div>
-	</div>
+  <a class="block">
+  <figure class="w-full">
+    <img
+      src={src}
+      alt={name}
+      class="w-full h-48 md:h-56 lg:h-64 object-cover rounded-t-lg"
+    />
+  </figure>
+  <div class="p-4">
+    <h3 class="font-medium text-lg">{name}</h3>
+    <p class="text-sm text-gray-500 mt-2">{description}</p>
+    <!-- ...resto del card... -->
+     
+
+  </div>
+  </a>
+  <!-- <div class="flex items-end mt-1 px-3 pb-2">
+      <Button /> 
+  </div> -->
 </div>
+</div>
+
+<script type="module">
+  function adjustCard(root) {
+    const img = root.querySelector('img');
+    const container = img ? img.closest('figure') : root;
+    if (!img || !container) return;
+
+    const adjust = () => {
+      const cW = container.clientWidth;
+      const cH = container.clientHeight || (cW * 0.66);
+      const nW = img.naturalWidth || 0;
+      const nH = img.naturalHeight || 0;
+
+      if (nW && nH && (nW > cW || nH > cH)) {
+        img.classList.remove('object-cover');
+        img.classList.add('object-contain');
+        container.classList.add('bg-white');
+      } else {
+        img.classList.remove('object-contain');
+        img.classList.add('object-cover');
+      }
+    };
+
+    if (img.complete) adjust();
+    else img.addEventListener('load', adjust, { once: true });
+
+    // Guardamos la función para poder re-ejecutarla en resize
+    root.__adjustFn = adjust;
+  }
+
+  function initAll() {
+    document.querySelectorAll('.product-card').forEach(adjustCard);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.product-card').forEach(root => {
+      const fn = root.__adjustFn;
+      if (typeof fn === 'function') fn();
+    });
+  });
+</script>
+
+
+ 
