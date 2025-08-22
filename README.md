@@ -66,3 +66,32 @@ You can add blog posts in Markdown or MDX format under `src/content/blog/`. Post
 
 This project is for demonstration purposes.  
 Feel free to adapt and use it for your own lamp catalog or similar
+
+---
+
+## Deploying to GitHub Pages
+
+This project is configured to publish as a GitHub Pages project site under:
+
+https://AriC001.github.io/MileLabs/
+
+Steps to enable automatic deploy on push to `master`:
+
+1. Commit and push your changes to the `master` branch.
+2. The included GitHub Actions workflow (`.github/workflows/deploy.yml`) will build the site and publish the `dist/` folder to the `gh-pages` branch.
+3. In your repository Settings → Pages, set the source to the `gh-pages` branch (folder: /) and save.
+
+Local test and build commands:
+
+```powershell
+npm install
+npm run dev
+# Build for production
+npm run build
+# Preview production build
+npm run preview
+```
+
+Notes:
+- If you want a user site (https://AriC001.github.io) instead of a project site under a subpath, change `base` to `'/'` and `site` to `'https://AriC001.github.io'` in `astro.config.mjs`.
+- If you use a custom domain, add a `CNAME` file into the `public/` directory with your domain name.
