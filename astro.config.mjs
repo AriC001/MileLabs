@@ -2,13 +2,11 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
-  // Set `site` and `base`. For a custom domain we serve from the root path.
-  site: 'https://milelabs.com.ar',
-  base: '/',
+  site: 'https://milelabs.com.ar', // ⚠️ O tu dominio si usas CNAME
+  base: '/', // ⚠️ Muy importante para rutas
+  output: 'static', // ✅ Forzamos modo estático
   integrations: [mdx(), sitemap(), tailwind()],
 });
