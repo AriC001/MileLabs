@@ -3,49 +3,49 @@
         "name": "Modern Table Lamp",
         "description": "A sleek, minimalist table lamp perfect for any modern interior.",
         "price": 49.99,
-        "img": "../src/assets/fa58684d-d12b-4126-a767-95f402d917bc.jpg"
+        "img": "./fa58684d-d12b-4126-a767-95f402d917bc.jpg"
     },
     {
         "name": "Vintage Desk Lamp",
         "description": "Classic vintage-style desk lamp with adjustable arm.",
         "price": 59.99,
-        "img": "./src/assets/eefdcbd5-6183-4299-a784-326038fb056f.jpg"
+        "img": "/eefdcbd5-6183-4299-a784-326038fb056f.jpg"
     },
     {
         "name": "Industrial Floor Lamp",
         "description": "Tall industrial floor lamp with exposed bulb design.",
         "price": 89.99,
-        "img": "./src/assets/D266EC5E-A0AA-4AB9-AF10-1C40ABD15E8A.jpg"
+        "img": "/D266EC5E-A0AA-4AB9-AF10-1C40ABD15E8A.jpg"
     },
     {
         "name": "LED Bedside Lamp",
         "description": "Energy-efficient LED lamp with touch controls for your bedside.",
         "price": 34.99,
-        "img": "./src/assets/blog-placeholder-4.jpg"
+        "img": "/blog-placeholder-4.jpg"
     },
     {
         "name": "Art Deco Wall Lamp",
         "description": "Elegant wall lamp inspired by Art Deco design, ideal for hallways.",
         "price": 44.99,
-        "img": "./src/assets/blog-placeholder-5.jpg"
+        "img": "/blog-placeholder-5.jpg"
     },
     {
         "name": "Smart RGB Lamp",
         "description": "WiFi-enabled lamp with customizable RGB colors and app control.",
         "price": 69.99,
-        "img": "./src/assets/blog-placeholder-1.jpg"
+        "img": "/blog-placeholder-1.jpg"
     },
     {
         "name": "Rustic Lantern Lamp",
         "description": "Rustic lantern-style lamp for cozy, farmhouse-inspired spaces.",
         "price": 39.99,
-        "img": "./src/assets/blog-placeholder-2.jpg"
+        "img": "/blog-placeholder-2.jpg"
     },
     {
         "name": "Crystal Chandelier Lamp",
         "description": "Luxurious chandelier lamp with sparkling crystal accents.",
         "price": 129.99,
-        "img": "./src/assets/blog-placeholder-3.jpg"
+        "img": "/blog-placeholder-3.jpg"
     }
 
 ]
