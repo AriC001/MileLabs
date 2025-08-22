@@ -6,20 +6,15 @@ const src = Array.isArray(img) ? (img[0] || '') : img;
 <style>
             /* .product-card {min-height:28rem} */
             @media (min-width:768px) {
-                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); } */
-                .product-card {min-height:23rem}
+                .product-card {min-height:17rem}
             }
 
-            /* md and up: use auto-fit with a sensible minimum card width to avoid tiny cards */
             @media (min-width:1100px) {
-                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr)); } */
-                .product-card {min-height:25rem}
+                .product-card {min-height:20rem}
             }
 
-            /* xl: allow slightly larger minimums */
             @media (min-width:1280px) {
-                /* .products-grid { grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); } */
-                .product-card {min-height:28rem}
+                .product-card {min-height:23rem}
             }
             
 
