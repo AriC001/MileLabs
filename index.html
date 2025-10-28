@@ -69,6 +69,9 @@ Descubrí nuestra increible collecion de procutos
   function initAll() {
     document.querySelectorAll('.product-card').forEach(adjustCard);
   }
+  function doNothing(){
+            console.log("Do nothing");
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initAll);
